@@ -5,7 +5,7 @@ FROM debian:latest
 RUN apt-get update && apt-get install -y openjdk-21-jdk
 
 # Copie des fichiers source dans l'image
-ADD  morpion /morpion/
+ADD  app /morpion/
 
 # Définition du répertoire de travail
 WORKDIR /app
