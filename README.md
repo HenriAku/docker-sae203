@@ -1,3 +1,15 @@
+# Projet SAE 2.03 equipe 10
+
+## Titre du projet
+Notre projet et un Moprion 
+
+## Membres de l'équipe
+- B1 - Rougeolle Henri
+- B2 - Bouquet Jules
+- B2 - Royer Nathan
+- B2 - Demeillers Killian
+
+
 ## Instructions pour lancez l'application
 - Tout d'abord, lancez docker.
 
