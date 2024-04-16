@@ -50,35 +50,47 @@ Ensuite, ils calculent chacun de leur coté si c'est leur tour, leur interface e
 # Mise en place du serveur via Docker
 
 Utilisation de l'image Debian officielle comme base :
-
+````
 FROM debian:latest
-
+````
 Cela spécifie que notre image Docker sera basée sur l'image Debian la plus récente disponible sur le hub Docker.
 
 Installation du JDK OpenJDK 11 :
-
+````
 RUN apt-get update && apt-get install -y default-jdk
-
+````
 Cette commande met à jour les références des paquets disponibles dans les dépôts et installe le JDK OpenJDK version 11. Cela permettra d'exécuter des programmes Java dans notre conteneur.
 
 Copie des fichiers source dans l'image :
+
+````
 COPY app /app
+````
 
 Cette commande copie les fichiers source de l'application depuis le répertoire local nommé app vers le répertoire /app dans l'image Docker. Cela inclura probablement tous les fichiers nécessaires à notre application Java.
 
 Définition du répertoire de travail :
 
+````
 WORKDIR /app
+````
 
 Cela spécifie que le répertoire de travail dans le conteneur sera /app, ce qui signifie que toutes les commandes suivantes seront exécutées dans ce répertoire.
 
 Compilation des fichiers Java :
-
+````
 RUN javac -encoding UTF-8 morpion/Server.java
+````
 
 Cette commande compile le fichier Server.java situé dans le répertoire morpion. Cela suppose que le code source de l'application Java est organisé de cette manière dans le répertoire /app.
 
 Commande par défaut pour exécuter votre service :
+````
 CMD ["tail", "-f", "/dev/null"]
+````
 
 Cette commande spécifie la commande par défaut à exécuter lorsque le conteneur est démarré. Ici, elle est configurée pour exécuter tail -f /dev/null, ce qui ne fait rien mais maintient le conteneur actif.
+
+**En résumé, voici le contenu du Dockerfile :**
+
+<img src="https://github.com/HenriAku/docker-sae203/assets/107880155/7b66adf4-cf74-4867-bfb9-c7d8868876bf" alt="image" width="50%" height="50%"/>
