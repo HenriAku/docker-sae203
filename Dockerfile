@@ -1,8 +1,9 @@
 # Utilisation de l'image Debian officielle comme base
 FROM debian:latest
 
+RUN sed -i 's/httpredir.debian.org/mirrors.ubuntu.com/mirrors.tuna.tsinghua.edu.cn/g' /etc/apt/sources.list
 # Installation des dépendances Java
-RUN apt-get update && apt-get install -y openjdk-11-jdk
+RUN apt-get update && apt-get install -y openjdk-21-jdk
 
 # Copie des fichiers source dans l'image
 ADD  app /morpion/
