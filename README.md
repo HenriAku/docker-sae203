@@ -47,7 +47,7 @@ java morpion.Server
 ```
 
 -Une fois cela fait les 2 joueur doivent aller dans un terminal.
--Puis aller dans le repetoire ou est le code et faite ceci
+ Puis aller dans le repetoire ou est le code et faite ceci
 ```shell
 java morpion.Morpion
 ```
