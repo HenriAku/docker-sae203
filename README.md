@@ -64,12 +64,12 @@ java morpion.Sezvez
 java morpion.Morpion
 ```
 
-- Finalement, arrêtez le conteneur avec la commande suivante (les deznières chiffres sont le code de hachage affiché par docker ps):
+- Finalement, arrêtez le conteneur avec la commande suivante (les derniers chiffres sont le code de hachage affiché par docker ps):
 ```shell
 docker stop b8f8f406b03c
 ```
 
-- Si on souhaite supprimez le conteneur, on peut tapez :
+- Si on souhaite supprimer le conteneur, on peut taper :
 ```shell
 docker rm b8f8f406b03c
 ```
