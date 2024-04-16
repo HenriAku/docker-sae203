@@ -2,7 +2,7 @@
 FROM debian:latest
 
 # Installation des dépendances Java
-RUN apt-get update && apt-get install -y openjdk-21-jdk
+RUN apt-get update && apt-get install -y openjdk-11-jdk
 
 # Copie des fichiers source dans l'image
 ADD  app /morpion/
