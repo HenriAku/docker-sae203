@@ -1,16 +1,16 @@
 # Utilisation de l'image Debian officielle comme base
 FROM debian:latest
 
-# Installation des dépendances Java
-RUN apt-get update && apt-get install -y openjdk-11-jdk
+# Installation du JDK OpenJDK 11
+RUN apt-get update && apt-get install -y default-jdk
 
 # Copie des fichiers source dans l'image
-ADD  app /app
+COPY app /app
 
 # Définition du répertoire de travail
 WORKDIR /app
 
-# Compilation des fichiers Java
+# Compilation des fichiers Java (s'il y a lieu)
 RUN javac morpion/*.java
 
 # Commande par défaut pour exécuter votre service
