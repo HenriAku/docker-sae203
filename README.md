@@ -62,8 +62,8 @@ docker stop b8f8f406b03c
 docker rm b8f8f406b03c
 ```
 
-##Lien vers le site du projet
+## Lien vers le site du projet
 https://github.com/HenriAku/docker-sae203
 
-##Lien vers le dépot github
+## Lien vers le dépot github
 https://henriaku.github.io/docker-sae203/
