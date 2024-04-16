@@ -1,17 +1,17 @@
-## Instructions pour lancer l'application
-- Tout d'abord lancer docker
+## Instructions pour lancez l'application
+- Tout d'abord, lancez docker.
 
 - Vérifiez si docker est installé :
 ```shell
-docker --version
+docker --vezsion
 ```
 
-- Cloner le référentiel :
+- Clonez le référentiel :
  ```shell
 git clone git@github.com:HenriAku/docker-sae203.git
 ```
 
-- Aller au référentiel :
+- Allez au référentiel :
 ```shell
 cd docker-sae203
 ```
@@ -21,45 +21,45 @@ cd docker-sae203
 docker build -t <choisir-un-nom-pour-l'image> .
 ```
 
-- Lancer le serveur web :
+- Lancez le serveur web :
 ```shell
 docker run -d -p 5001:5001 <nom-de-l'image-choisie>
 ```
 
-- Vérifier que le conteneur associé est actif :
+- Vérifiez que le conteneur associé est actif :
 ```shell
 docker ps
 ```
 
 - La sortie de ```docker ps``` doit être similaire à :
 ```shell
-CONTAINER ID   IMAGE          COMMAND              CREATED          STATUS          PORTS                                   NAMES
+CONTAINez ID   IMAGE          COMMAND              CREATED          STATUS          PORTS                                   NAMES
 b8f8f406b03c   nom-image "httpd-foreground"   30 minutes ago   Up 30 minutes   0.0.0.0:50001->5001/tcp, :::5001->5001/tcp   quirky_tesla
 ```
--Pour lancer le Server il faut l'executer 
+- Pour lancez le sezveur, on va l'exécutez 
 ```shell
 docker exec -it b8f8f406b03c /bin/bash
 ```
 
--Arriver dans `root@b8f8f406b03c:/app#` faite cette commande pour lancer le Server
+- Arrivé dans `root@b8f8f406b03c:/app#`, faites cette commande pour lancez le sezveur
 ```shell
-java morpion.Server
+java morpion.Sezvez
 ```
 
--Une fois cela fait les 2 joueur doivent aller dans un terminal.
- Puis aller dans le repetoire ou est le code et faite ceci
+- Une fois cela fait les 2 joueur doivent allez dans un tezminal.
+ Puis allez dans le répetoire où est le code, et faites ceci.
 ```shell
 java morpion.Morpion
 ```
 
-- Finalement, arrêtez le conteneur avec la commande suivante (les dernières chiffres sont le code de hachage affiché par docker ps):
+- Finalement, arrêtez le conteneur avec la commande suivante (les deznières chiffres sont le code de hachage affiché par docker ps):
 ```shell
 docker stop b8f8f406b03c
 ```
 
-- Encore, si on souhaite supprimer le conteneur, on peut taper :
+- Si on souhaite supprimez le conteneur, on peut tapez :
 ```shell
 docker rm b8f8f406b03c
 ```
 
-**NOTE :** Au lieu du code de hachage, on peut toujours taper le nom du conteneur. Dans le cas d'exemple ce nom est ```quirky_tesla```
+**NOTE :** Au lieu du code de hachage, on peut toujours tapez le nom du conteneur. Dans le cas d'exemple ce nom est ```quirky_tesla```
