@@ -11,7 +11,7 @@ COPY app /app
 WORKDIR /app
 
 # Compilation des fichiers Java
-RUN javac -encoding UTF-8 morpion/*.java
+RUN javac -encoding UTF-8 morpion/Server.java
 
 # Commande par défaut pour exécuter votre service
-CMD ["java", "morpion/Morpion"]
+CMD ["tail", "-f", "/dev/null"]
