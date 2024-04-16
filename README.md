@@ -8,5 +8,9 @@ Nous avons donc commencé par le code du Morpion en java, avec ces contraintes :
 
 - Deux joueurs (clients) doivent pouvoir se connecter.
 - Un serveur (plus tard hébergé sur docker) doit gérer la connexion entre les joueurs.
-Test
+
+Nous avons donc décidé de diviser le code en deux fichiers :
+- Un fichier ``Morpion.java`` (qu'on aurait pu appeler ``Client.java``) qui sera exécuté par les clients et qui va gérer l'interface des joueurs, en recevant et envoyant des informations au serveur.
+- Un fichier ``Serveur.java`` qui sera exécuté sur le docker et qui va faire le lien entre les joueurs. Les clients devront se connecter sur le serveur tous les deux pour pouvoir jouer.
+
 ![image](https://github.com/HenriAku/docker-sae203/assets/107880155/8bc37057-4163-498c-9cfa-6a7a4f3160e6)
