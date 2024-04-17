@@ -14,4 +14,4 @@ WORKDIR /app
 RUN javac -encoding UTF-8 morpion/Server.java
 
 # Commande par défaut pour exécuter votre service
-CMD ["tail", "-f", "/dev/null"]
+CMD ["java", "morpion.Server"]
