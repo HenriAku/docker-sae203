@@ -48,15 +48,6 @@ docker ps
 CONTAINez ID   IMAGE          COMMAND              CREATED          STATUS          PORTS                                   NAMES
 b8f8f406b03c   nom-image "httpd-foreground"   30 minutes ago   Up 30 minutes   0.0.0.0:50001->5001/tcp, :::5001->5001/tcp   quirky_tesla
 ```
-- Pour lancez le sezveur, on va l'exécutez 
-```shell
-docker exec -it b8f8f406b03c /bin/bash
-```
-
-- Arrivé dans `root@b8f8f406b03c:/app#`, faites cette commande pour lancez le sezveur
-```shell
-java morpion.Sezvez
-```
 
 - Une fois cela fait les 2 joueur doivent allez dans un tezminal.
  Puis allez dans le répetoire où est le code, et faites ceci.
