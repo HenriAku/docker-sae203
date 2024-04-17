@@ -86,10 +86,10 @@ Cette commande compile le fichier Server.java situé dans le répertoire morpion
 
 Commande par défaut pour exécuter votre service :
 ````
-CMD ["tail", "-f", "/dev/null"]
+CMD ["java", "morpion.Server"]
 ````
 
-Cette commande spécifie la commande par défaut à exécuter lorsque le conteneur est démarré. Ici, elle est configurée pour exécuter tail -f /dev/null, ce qui ne fait rien mais maintient le conteneur actif.
+Cette commande spécifie la commande par défaut à exécuter lorsque le conteneur est démarré. 
 
 **En résumé, voici le contenu du Dockerfile :**
 
